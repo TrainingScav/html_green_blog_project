@@ -39,13 +39,13 @@ a:hover {
     cursor: pointer;
 }
 
-input {
-    all: unset;
-}
-
 input:hover {
     text-decoration: none;
     cursor: pointer;
+}
+
+button {
+    all:unset;
 }
 
 /* 공통 디자인 끝 */
@@ -237,6 +237,166 @@ input:hover {
 /* 푸터 작업 끝 */
 
 
+/* 포스트 상세화면 작업 시작 */
+
+.page-info-container {
+
+}
+
+.page-info-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-title {
+    font-weight: bold;
+}
+
+.page-info-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.post-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-content-info {
+    margin-top: 20px;
+}
+
+.dateAndUrl-info {
+    
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.post-copy-url {
+    color: #9E9E9E;
+}
+
+.post-img-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.post-content-font {
+    padding: 20px;
+}
+
+.other-post-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.category-info {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 35px;
+    color: #858585;
+}
+
+.category {
+    color: black;
+    font-weight: bold;
+}
+
+.post-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-comment {
+    margin-top: 30px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.comment-count {
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.count {
+    color: rgb(0, 185, 185);
+}
+
+.comment-info {
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+}
+
+.nameAndDate {
+    width: 187px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.date {
+    color: #858585;
+}
+
+.comment {
+    font-size: 20px;
+    color: #858585;
+    margin-bottom: 20px;
+}
+
+.write-comment-container {
+    margin-top: 20px;
+    padding: 10px;
+    width: auto;
+}
+
+.write-user-info {
+    display: flex;
+}
+
+.user-info-input {
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+}
+
+#user-comment {
+    all:unset;
+    width: 97%;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.regist-comment-btn {
+    position: absolute;
+    top: 1600px;
+    left: 1210px;
+    width: 70px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+
 /* 모달창 작업 시작 */
 .modal_btn {
     display: block;
@@ -254,7 +414,27 @@ input:hover {
 }
 
 /*모달 팝업 영역 스타일링*/
-.modal {
+/* 모달 팝업 버튼 */
+.close_btn, .save_btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close_btn {
+    background-color: #d6d6d6;
+    color: #696969;
+    font-weight: bold;
+}
+
+.save_btn {
+    background-color: rgb(0, 155, 158);
+    color: #fff;
+    font-weight: bold;
+}
+
+.header-modal, .menu-modal{
 /*팝업 배경*/
 	display: none; /*평소에는 보이지 않도록*/
     position: absolute;
@@ -265,37 +445,143 @@ input:hover {
     overflow: hidden;
     background: rgba(0,0,0,0.5);
 }
-.modal .modal_popup {
+.header-modal, .menu-modal {
 /*팝업*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
-    width: 50%;
+}
+
+.header-modal_popup, .menu-modal_popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
     height: 30%;
     background: #ffffff;
     border-radius: 20px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
+.menu-modal_popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 40%;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .blog-title-container, .blog-header-img-container, 
-.blog-header-youtube-container, .blog-header-instagram-container,
-.modal-popup-button-container {
+.blog-header-youtube-container, .blog-header-instagram-container {
+    /* width: 80%; */
     display: flex;
     justify-content: start;
 }
 
 .blog-header-label {
-    width: 150px;
+    width: 25%;
 }
 
 .input-design {
     width: 80%;
+    height: 30px;
     border: 1px solid black;
+    border-radius: 5px;
+}
+
+.input-regist-img-design {
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.regist-img-btn {
+    width: 150px;
+    background-color: rgb(0, 155, 158);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .header-img-file-container {
+    width: 80%;
     display: flex;
+    gap: 10px;
 }
+
+.blog-header-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+/* 사이드 메뉴 스타일링 */
+
+.menu-main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-management-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 400px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.menu-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-menu-title {
+    height: 30px;
+    border-radius: 5px;
+}
+
+.menu-add-btn {
+    width: 50px;
+    height: auto;
+    border: 1px solid #696969;
+    border-radius: 2px;
+    padding : 5px;
+}
+
+.menu-radio-selected {
+    width: 50px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.menu-button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-close_btn, .menu-save_btn {
+    width: 100px;
+}
+
+

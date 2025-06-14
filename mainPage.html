@@ -42,9 +42,7 @@
                         <div class="navigation-header">
                             <div class="viewAllMenu">전체 보기</div>
                             <div class="modify-menu">
-                                <a href="">
-                                    <i class="header-icon fa-solid fa-thin fa-gear"></i>
-                                </a>
+                                <i class="menu-icon fa-solid fa-thin fa-gear"></i>
                             </div> 
                         </div>
                         <div class="navigation-body">
@@ -272,9 +270,9 @@
             </div>            
         </div>
     </section>
-
-    <div class="modal">
-        <div class="modal_popup">
+    <!-- header 정보 수정 modal -->
+    <div class="header-modal">
+        <div class="header-modal_popup">
             <div class="blog-title-container">
                 <h3 class="blog-header-label">블로그명</h3>
                 <input type="text" name="" id="" class="input-design">
@@ -282,10 +280,9 @@
             <div class="blog-header-img-container">
                 <h3 class="blog-header-label">블로그 상단 배경</h3>
                 <div class="header-img-file-container">
-                    <button>이미지 등록</button>
-                    <input type="text" name="" id="" class="input-design">
+                    <button class="regist-img-btn">이미지 등록</button>
+                    <input type="text" name="" id="" class="input-regist-img-design">
                 </div>
-                
             </div>
             <div class="blog-header-youtube-container">
                 <h3 class="blog-header-label">YouTube URL</h3>
@@ -295,11 +292,48 @@
                 <h3 class="blog-header-label">Instagram Url</h3>
                 <input type="text" class="input-design" id="">
             </div>
-            <div class="modal-popup-button-container">
-                <button type="button" class="close_btn">닫기</button>
-                <button type="button" class="close_btn">저장</button>
+            <div class="blog-header-button-container">
+                <div class="blog-header-button">
+                    <button type="button" class="close_btn header-close_btn">닫기</button>
+                    <button type="button" class="save_btn header-save_btn">확인</button>
+                </div>
             </div>
-            
+        </div>
+    </div>
+
+    <!-- 사이드 메뉴 정보 수정 modal -->
+    <div class="menu-modal">
+        <div class="menu-modal_popup">
+            <div class="menu-main-container">
+                <button type="button" class="menu-add-btn">+추가</button>
+                <div class="menu-management-container">
+                    <div class="menu-info">
+                        <input type="text" name="" id="" class="input-menu-title">
+                        <input type="radio" id="css" name="interest" class="menu-radio-selected">
+                    </div>
+                    <div class="menu-info">
+                        <input type="text" name="" id="" class="input-menu-title">
+                        <input type="radio" id="css" name="interest" class="menu-radio-selected">
+                    </div>
+                    <div class="menu-info">
+                        <input type="text" name="" id="" class="input-menu-title">
+                        <input type="radio" id="css" name="interest" class="menu-radio-selected">
+                    </div>
+                    <div class="menu-info">
+                        <input type="text" name="" id="" class="input-menu-title">
+                        <input type="radio" id="css" name="interest" class="menu-radio-selected">
+                    </div><div class="menu-info">
+                        <input type="text" name="" id="" class="input-menu-title">
+                        <input type="radio" id="css" name="interest" class="menu-radio-selected">
+                    </div>
+                </div>
+            </div>
+            <div class="menu-button-container">
+                <div class="menu-button">
+                    <button type="button" class="close_btn menu-close_btn">취소</button>
+                    <button type="button" class="save_btn menu-save_btn">완료</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
