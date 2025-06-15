@@ -9,7 +9,7 @@ html,
 body {
     min-width: 100vh;
     min-height: 100vh;
-    background-image: url("img/header_background_img2.jpg");
+    background-image: url("img/background-img2.jpg");
     background-size: cover;
 }
 
@@ -62,13 +62,14 @@ button {
     justify-content: space-between;
     padding: 20px;
     margin-top: 30px;
-    /* background-image: url("img/header_background_img2.jpg"); */
-    background-size: cover;
+    background-image: url("img/header_background_img6.jpg");
+    /* background-size: cover; */
 }
 
 .header-title-container {
     display: flex;
     gap: 15px;
+    color: white;
 }
 
 .header-title {
@@ -80,6 +81,7 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: white;
 }
 
 .instagram-icon,
@@ -96,6 +98,15 @@ button {
     display: flex;
     padding: 20px;
     justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 2px 7px 14px 0px #6b6b6b;
+}
+
+.addpost-section-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 2px 7px 14px 0px #6b6b6b;
@@ -164,6 +175,14 @@ button {
     width: 720px;
 }
 
+.addpost-article-container {
+    display: flex;
+    flex-direction: column;
+    width: 720px;
+    margin: auto;
+    margin-top: 40px;
+}
+
 .post-list-container {
     display: flex;
     flex-direction: column;
@@ -229,6 +248,27 @@ button {
     gap: 15px;
     font-size: 13px;
 }
+
+
+.select-category-box {
+    width: 160px;
+    margin-top: 20px;
+    margin-left: 5px;
+    padding-left: 10px;
+    border: 1px solid black;
+}
+
+#category {
+    border: none;
+}
+
+.addpost-button-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+
 
 /* 아티클 작업 끝 */
 
@@ -495,6 +535,10 @@ button {
     width: 25%;
 }
 
+.inputAndLabel {
+    width: 100%;
+}
+
 .input-design {
     width: 80%;
     height: 30px;
@@ -507,6 +551,7 @@ button {
     height: 40px;
     border: 1px solid black;
     border-radius: 5px;
+    background-color: darkgray;
 }
 
 .regist-img-btn {
