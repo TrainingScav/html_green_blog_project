@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <title>Green-blog</title>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <div class="header-container">
+                <div class="header-title-container">
+                    <p class="header-title">Green's Blog </p>
+                    <i class="header-icon fa-solid fa-thin fa-gear"></i>
+                </div>
+                <div class="header-sns-icon-container">
+                    <a href="https://www.instagram.com/" target="_blank"><img class="instagram-icon" src="/css/img/instagram-icon.png" alt=""></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img class="youtube-icon" src="/css/img/youtube-icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="inner">
+            <div class="addpost-section-container">
+                <article>
+                    <div class="select-category-box">
+                        <select name="category" id="category">
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="IOS">IOS</option>
+                            <option value="software material">소프트웨어 자료</option>
+                            <option value="data structure">자료구조</option>
+                            <option value="linux">리눅스</option>
+                            <option value="git">Git</option>
+                            <option value="myStudy">자기계발</option>
+                            <option value="management Strategy">경영전략</option>
+                            <option value="leaderShip">리더쉽</option>
+                        </select>
+                    </div>
+                    <div class="addpost-article-container">
+                        <div id="editor"></div>
+                    </div>
+                    <div class="addpost-button-container">
+                        <div class="addpost-button">
+                            <a href=""><button type="button" class="close_btn addpost-close_btn">취소</button></a>
+                            <a href=""><button type="button" class="save_btn addpost-save_btn">완료</button></a>
+                        </div>
+                    </div>
+                </article>
+            </div>            
+        </div>
+    </section>
+    <!-- header 정보 수정 modal -->
+    <div class="header-modal">
+        <div class="header-modal_popup">
+            <div class="blog-title-container">
+                <h3 class="blog-header-label">블로그명</h3>
+                <input type="text" name="" id="" class="input-design">
+            </div>
+            <div class="blog-header-img-container">
+                <h3 class="blog-header-label">블로그 상단 배경</h3>
+                <div class="header-img-file-container">
+                    <button class="regist-img-btn">이미지 등록</button>
+                    <input type="text" name="" id="" class="input-regist-img-design">
+                </div>
+            </div>
+            <div class="blog-header-youtube-container">
+                <h3 class="blog-header-label">YouTube URL</h3>
+                <input type="text" name="" id="" class="input-design">
+            </div>
+            <div class="blog-header-instagram-container">
+                <h3 class="blog-header-label">Instagram Url</h3>
+                <input type="text" class="input-design" id="">
+            </div>
+            <div class="blog-header-button-container">
+                <div class="blog-header-button">
+                    <button type="button" class="close_btn header-close_btn">닫기</button>
+                    <button type="button" class="save_btn header-save_btn">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/mainPage.js"></script>
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <script>
+        const editor = new toastui.Editor({
+            el: document.querySelector('#editor'), // 에디터를 적용할 요소 (컨테이너)
+            height: '500px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
+            initialEditType: 'wysiwyg',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
+            initialValue: '내용을 입력해 주세요.',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
+            previewStyle: 'vertical'                // 마크다운 프리뷰 스타일 (tab || vertical)
+        });
+    </script>
+</body>
+
+
+
+</html>
